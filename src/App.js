@@ -1,9 +1,11 @@
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Main from "./components/Main.jsx";
 
 function App() {
   return (
     <div className="App">
       <Sidebar />
+      <Main />
     </div>
   );
 }

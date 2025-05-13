@@ -3,7 +3,12 @@
 .body {
   margin: 0;
   font-family: 'OpenSans';
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
   background-color: #fff;
+}
+
+.App {
+  display: flex;
+  gap: 20px;
 }

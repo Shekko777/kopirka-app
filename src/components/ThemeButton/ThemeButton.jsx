@@ -1,4 +1,5 @@
 import React from "react";
+import './ThemeButton.css';
 
 export default function ThemeButton() {
   const [theme, setTheme] = React.useState("light");
@@ -16,20 +17,6 @@ export default function ThemeButton() {
       className="theme-toggle"
       aria-label="Переключить тему"
       onClick={toggleTheme}
-      style={{
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        fontSize: "2em",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        position: "absolute",
-        bottom: 40,
-        left: 0,
-        right: 0,
-        margin: "0px auto"
-      }}
     >
       {theme === "light" ? (
         // Луна

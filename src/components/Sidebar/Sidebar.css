@@ -41,14 +41,13 @@
 .sidebar__item {
   box-sizing: content-box;
   padding: 20px 40px;
+  display: flex;
   cursor: pointer;
+  align-items: center;
+  gap: 5px;
   color: #3e3e3e;
   font-weight: 500;
   font-size: 16px;
-}
-
-.sidebar__item:hover {
-  background-color: #cecece;
 }
 
 .sidebar__item_active {
@@ -56,14 +55,10 @@
   border-right: 3px solid #96d974;
 }
 
-/* ТЕМА САЙТА */
-.theme-button {
-  position: absolute;
-  right: 0;
-  bottom: 40px;
-  left: 0;
-  max-width: 40px;
-  margin: 0 auto;
+.sidebar__item:hover {
+  background-color: #e2e2e2;
+}
 
-  color: #302762;
+.sidebar__item_active:hover {
+  background-color: #fff;
 }

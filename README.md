@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# 🤖 Копирка
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Копирка** — это простое веб-приложение для удобной работы с шаблонным текстом, быстрым копированием фрагментов, личными подсказками и быстрым доступом к избранным ресурсам.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🧷 О проекте
 
-### `npm start`
+**Копирка** создан как пет-проект для тренировки навыков веб-разработки. Приложение не предназначено для коммерческого использования или получения прибыли.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Основные возможности:**
+- Создание и хранение макросов — быстрых кнопок для копирования заранее заготовленных текстов.
+- Страница с карточками-подсказками, которые можно оформлять с помощью Markdown. Это удобно для хранения мини-инструкций и памяток.
+- Окно для хранения и быстрой навигации по часто используемым ссылкам на другие ресурсы.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📷 Скриншоты
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- 
+Если будут скриншоты интерфейса — размести их здесь!
+![Kopirka screenshots](./screenshots/overview.png)
+-->
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💡 Как использовать
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Запуск локально
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Клонируйте репозиторий:
 
-### `npm run eject`
+```sh
+git clone https://github.com/ваш-логин/kopirka.git
+cd kopirka
+``` 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Установите зависимости:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm install
+``` 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Запустите приложение:
+    
+```sh
+npm start
+``` 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Перейдите по адресу `http://localhost:3000` в браузере.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📚 Используемые технологии
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React](https://react.dev/) (или укажи другой фреймворк, если используешь)
+- [Markdown rendering library](https://github.com/remarkjs/react-markdown) для разметки подсказок
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ✂️ Вклад
 
-### Analyzing the Bundle Size
+Pull Requests и Issues приветствуются!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Дисклеймер
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Данный проект создан исключительно в образовательных и некоммерческих целях.  
+Он предоставляется "как есть" без каких-либо гарантий.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

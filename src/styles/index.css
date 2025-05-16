@@ -4,11 +4,14 @@
   margin: 0;
   font-family: 'OpenSans';
   font-size: 16px;
-  color: #000;
+  color: #3e3e3e;
   background-color: #fff;
 }
 
 .App {
   display: flex;
-  gap: 20px;
+}
+
+.main {
+  width: 100%;
 }

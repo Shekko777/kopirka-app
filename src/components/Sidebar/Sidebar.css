@@ -6,7 +6,6 @@
   box-sizing: border-box;
   text-align: center;
   color: #3e3e3e;
-  border-bottom: 1px solid #656565;
   text-shadow: 0 0 2px rgba(0,0,0,0.4);
 }
 
@@ -19,7 +18,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 10px;
   box-sizing: border-box;
   width: 100%;
   max-width: 220px;
@@ -38,7 +37,8 @@
   list-style: none;
 }
 
-.sidebar__item {
+.sidebar__navlink {
+  text-decoration: none;
   box-sizing: content-box;
   padding: 20px 40px;
   display: flex;
@@ -47,10 +47,11 @@
   gap: 5px;
   color: #3e3e3e;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
+  transition: all 0.2s;
 }
 
-.sidebar__item_active {
+.sidebar__navlink_active {
   background-color: #fff;
   border-right: 3px solid #96d974;
 }

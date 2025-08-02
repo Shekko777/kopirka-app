@@ -1,68 +1,105 @@
-import { NavLink } from 'react-router-dom';
-import './Sidebar.css';
-import ThemeButton from '../ThemeButton/ThemeButton';
+import React from 'react';
+import { NavLink } from "react-router-dom";
+import "./Sidebar.css";
 
 export default function Sidebar() {
+  const [theme, setTheme] = React.useState("light"); // Состояние кнопки переключения темы
+
+  // Логика переключения темы приложения
+  const toggleTheme = () => {
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
+    document.documentElement.setAttribute(
+      "data-theme",
+      theme === "light" ? "dark" : "light"
+    );
+  };
+
   return (
-    <nav className="sidebar">
+    <aside className="sidebar">
+      {/* Шапка всего приложения */}
       <header className="header">
-        <h1 className="header__title"><span className="header__title-span">К</span>опирка</h1>
+        <h1 className="header__title">
+          <span className="header__title-span">К</span>опирка
+        </h1>
       </header>
 
-      <ul className="sidebar__list">
-        <li className="sidebar__item">
-          <NavLink to="/" className={({isActive}) => isActive ? 'sidebar__navlink sidebar__navlink_active' : 'sidebar__navlink'}>
-            <svg viewBox="0 0 50 50" width="35" height="35" fill="none">
-              <rect x="10" y="13" width="30" height="17" rx="2" fill="#f7f7fa" stroke="#222" stroke-width="2"/>
-              <rect x="10" y="29" width="30" height="4" rx="1.5" fill="#e0e0e0" stroke="#222" stroke-width="1"/>
-              <rect x="21" y="33" width="8" height="3" rx="1" fill="#cfcfd1" stroke="#222" stroke-width="1"/>
-              <polygon points="17,38 33,38 30,43 20,43" fill="#bebebe" stroke="#222" stroke-width="1"/>
-              <rect x="13" y="16" width="10" height="3" rx="1.5" fill="#fff" fill-opacity="0.45"/>
-            </svg>
-            Главная  
-          </NavLink>
-        </li>
-        <li className="sidebar__item">
-          <NavLink to="/macros" className={({isActive}) => isActive ? 'sidebar__navlink sidebar__navlink_active' : 'sidebar__navlink'}>
-            <svg viewBox="0 0 50 50" width="35" height="35" fill="none">
-              <polygon points="12,31 38,31 36,36 14,36" fill="#e4c8b4" />
-              <rect x="12" y="23" width="26" height="8" rx="2" fill="#fbc280" stroke="#222" stroke-width="2" />
-              <polygon points="14,17 36,17 35,25 15,25" fill="#9fd2fc" stroke="#222" stroke-width="2"/>
-              <rect x="16" y="11" width="18" height="6" rx="1.5" fill="#d1efa6" stroke="#222" stroke-width="2"/>
-              <rect x="17" y="12" width="8" height="2" rx="1" fill="#fff" fill-opacity="0.6"/>
-            </svg>
-            Макросы
-          </NavLink>
-        </li>
-        <li className="sidebar__item">
-          <NavLink to="/cards" className={({isActive}) => isActive ? 'sidebar__navlink sidebar__navlink_active' : 'sidebar__navlink'}>
-            <svg viewBox="0 0 50 50" width="35" height="35" fill="none">
-            <polygon points="12,37 38,37 36,41 14,41" fill="#d1dcdb"/>
-            <rect x="12" y="13" width="26" height="24" rx="3" fill="#f9fbe7" stroke="#222" stroke-width="2" transform="skewY(5)"/>
-            <line x1="16" y1="20" x2="34" y2="20" stroke="#bdbdbd" stroke-width="1.5" />
-            <line x1="16" y1="26" x2="34" y2="26" stroke="#bdbdbd" stroke-width="1.5" />
-            <line x1="16" y1="32" x2="28" y2="32" stroke="#bdbdbd" stroke-width="1.5" />
-            <rect x="16" y="16" width="8" height="2" rx="1" fill="#fff" fill-opacity="0.6"/>
-          </svg>
-          Карточки
-          </NavLink>
-        </li>
-        <li className="sidebar__item">
-          <NavLink to="/links" className={({isActive}) => isActive ? 'sidebar__navlink sidebar__navlink_active' : 'sidebar__navlink'}>
-            <svg width="35" height="35" viewBox="0 0 50 50" fill="none">
-            <ellipse cx="18" cy="28" rx="8" ry="3.5" fill="#f7fcff" stroke="#222" stroke-width="2"/>
-            <ellipse cx="32" cy="22" rx="8" ry="3.5" fill="#e7ffe2" stroke="#222" stroke-width="2"/>
-            <rect x="20" y="24" width="10" height="6" rx="3" fill="#d3e8f1"/>
-            <rect x="21" y="23" width="8" height="4" rx="2" fill="#fff" stroke="#222" stroke-width="1"/>
-            <ellipse cx="21" cy="27" rx="2.3" ry="0.5" fill="#fff" fill-opacity="0.7"/>
-            <ellipse cx="36" cy="22" rx="2.3" ry="0.5" fill="#fff" fill-opacity="0.5"/>
-          </svg>
-          Ссылки
-          </NavLink>
-        </li>
-      </ul>
+      {/* Список ссылок */}
+      <nav className="nav">
+        <ul className="nav__list">
+          <li className="nav__item">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav__navlink nav__navlink_active" : "nav__navlink"
+              }
+            >
+              🏠 Главная
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink
+              to="/macros"
+              className={({ isActive }) =>
+                isActive ? "nav__navlink nav__navlink_active" : "nav__navlink"
+              }
+            >
+              📍 Макросы
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink
+              to="/cards"
+              className={({ isActive }) =>
+                isActive ? "nav__navlink nav__navlink_active" : "nav__navlink"
+              }
+            >
+              📚 Карточки
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink
+              to="/links"
+              className={({ isActive }) =>
+                isActive ? "nav__navlink nav__navlink_active" : "nav__navlink"
+              }
+            >
+              🔗 Ссылки
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
 
-      <ThemeButton />
-    </nav>
-  )
+      {/* Смена темы приложения */}
+      <button
+        className="sidebar__theme-toggle"
+        aria-label="Переключить тему"
+        onClick={toggleTheme}
+      >
+        {theme === "light" ? (
+          // Луна
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"
+              fill="#302762"
+            />
+          </svg>
+        ) : (
+          // Солнце
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="5" fill="#FFEB3B" />
+            <g stroke="#FFEB3B" strokeWidth="2">
+              <line x1="12" y1="1" x2="12" y2="4" />
+              <line x1="12" y1="20" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+          </svg>
+        )}
+      </button>
+    </aside>
+  );
 }

@@ -1,3 +1,4 @@
+/* 400 */
 @font-face {
   font-family: "OpenSans";
   font-weight: 400;
@@ -5,6 +6,7 @@
   src: local("OpenSans-Regular"), url('../assets/fonts/OpenSans-Regular.woff2') format('woff2'), url('../assets/fonts/OpenSans-Regular.woff') format('woff'), url('../assets/fonts/OpenSans-Regular.ttf') format('ttf');
 }
 
+/* 500 */
 @font-face {
   font-family: "OpenSans";
   font-weight: 500;
@@ -12,6 +14,7 @@
   src: local("OpenSans-Medium"), url('../assets/fonts/OpenSans-Medium.woff2') format('woff2'), url('../assets/fonts/OpenSans-Medium.woff') format('woff'), url('../assets/fonts/OpenSans-Medium.ttf') format('ttf');
 }
 
+/* 700 */
 @font-face {
   font-family: "OpenSans";
   font-weight: 700;
@@ -19,6 +22,7 @@
   src: local("OpenSans-Bold"), url('../assets/fonts/OpenSans-Bold.woff2') format('woff2'), url('../assets/fonts/OpenSans-Bold.woff') format('woff'), url('../assets/fonts/OpenSans-Bold.ttf') format('ttf');
 }
 
+/* 900 */
 @font-face {
   font-family: "OpenSans";
   font-weight: 900;

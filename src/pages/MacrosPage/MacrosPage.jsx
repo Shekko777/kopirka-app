@@ -1,27 +1,26 @@
 import React from "react";
 import Modal from "../../components/Modal/Modal.jsx";
 import Macros from "./components/Macros.jsx";
+import fruits from '../../utils/fruits.js';
 import "./MacrosPage.css";
 
 export default function MacrosPage() {
   const [info, setInfo] = React.useState(false);
+  const [macros, setMacros] = React.useState([]);
 
   function handleButtonAdd() {
     setInfo(!info);
   }
 
-  const fruits = [
-    { id: 1, title: "Яблоко", text: "Яблоко сочное, вкусное и полезное для здоровья." },
-    { id: 2, title: "Банан", text: "Банан сладкий, богат калием и удобен для перекуса." },
-    { id: 3, title: "Груша", text: "Груша мягкая, обладает приятным ароматом и сладостью." },
-    { id: 4, title: "Персик", text: "Персик сочный, с бархатистой кожурой и нежной мякотью." },
-    { id: 5, title: "Апельсин", text: "Апельсин кисло-сладкий, содержит много витамина C." },
-    { id: 6, title: "Киви", text: "Киви зеленый внутри, кисло-сладкий и витаминный фрукт." },
-    { id: 7, title: "Виноград", text: "Виноград мелкий, сладкий, бывает зеленый или фиолетовый." },
-    { id: 8, title: "Арбуз", text: "Арбуз большой, сочный, отлично утоляет жажду летом." },
-    { id: 9, title: "Ананас", text: "Ананас тропический фрукт с ярким сладким вкусом." },
-    { id: 10, title: "Слива", text: "Слива мягкая, сладкая и подходит для варенья." }
-  ];
+  // Удаление элемента по его id
+  function handleDeleteMacros(id) {
+    setMacros((el) => macros.filter(el => el.id !== id));
+  };
+
+  // Записываем в macros все макросы из localStorage
+  React.useEffect(() => {
+    setMacros(fruits);
+  }, []);
 
   return (
     <section className="macros">
@@ -61,7 +60,7 @@ export default function MacrosPage() {
         </div>
       ) : (
         <ul className="macros__list">
-          {fruits.map(({id, title, text}) => <Macros key={id} title={title} text={text} />)}
+          {macros.map(({id, title, text}) => <Macros key={id} title={title} text={text} id={id} handleDeleteMacros={handleDeleteMacros} />)}
         </ul>
       )}
     </section>

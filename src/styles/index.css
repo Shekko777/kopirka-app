@@ -10,10 +10,12 @@
 
 .App {
   display: flex;
-  overflow-y: hidden;
+  height: 100vh;
 }
 
 .main {
   width: 100%;
+  flex: 1;
   overflow-y: auto;
+  height: 100vh;
 }
